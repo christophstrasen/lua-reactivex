@@ -128,6 +128,32 @@ function Observable.fromTable(t, iterator, keys)
   end)
 end
 
+--- Creates an Observable that emits whenever the provided event fires. The event object must expose
+--    `addListener` and `removeListener` methods (e.g., Starlit LuaEvent).
+-- @arg {table} event - Event object that supports listener registration.
+-- @returns {Observable}
+---@param event table
+---@return Observable
+function Observable.fromLuaEvent(event)
+  assert(event, 'fromLuaEvent expects an event object')
+  assert(
+    type(event.addListener) == 'function' and type(event.removeListener) == 'function',
+    'fromLuaEvent expects addListener/removeListener functions on the event'
+  )
+
+  return Observable.create(function(observer)
+    local function relay(...)
+      observer:onNext(...)
+    end
+
+    event:addListener(relay)
+
+    return function()
+      event:removeListener(relay)
+    end
+  end)
+end
+
 --- Creates an Observable that produces values when the specified coroutine yields.
 -- @arg {thread|function} fn - A coroutine or function to use to generate values.  Note that if a
 --                             coroutine is used, the values it yields will be shared by all
