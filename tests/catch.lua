@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.catch')
+require('reactivex/operators/catch')
 
 describe('catch', function()
   it('ignores errors if no handler is specified', function()

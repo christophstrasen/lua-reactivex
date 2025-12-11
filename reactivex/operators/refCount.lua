@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
 
 -- Auto-connects a connectable observable on first subscriber and disconnects
 -- when the last subscriber unsubscribes.

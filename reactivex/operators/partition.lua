@@ -1,7 +1,7 @@
-local Observable = require 'reactivex.observable'
+local Observable = require('reactivex/observable')
 
-require("reactivex.operators.filter")
-require("reactivex.operators.reject")
+require("reactivex/operators/filter")
+require("reactivex/operators/reject")
 
 --- Returns two Observables: one that produces values for which the predicate returns truthy for,
 -- and another that produces values for which the predicate returns falsy.

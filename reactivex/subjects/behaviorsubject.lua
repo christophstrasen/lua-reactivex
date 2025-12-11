@@ -1,6 +1,6 @@
-local Subject = require 'reactivex.subjects/subject'
-local Observer = require 'reactivex.observer'
-local util = require 'reactivex.util'
+local Subject = require('reactivex/subjects/subject')
+local Observer = require('reactivex/observer')
+local util = require('reactivex/util')
 
 --- @class BehaviorSubject
 -- @description A Subject that tracks its current value. Provides an accessor to retrieve the most

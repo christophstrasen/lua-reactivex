@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that intercepts any errors from the previous and replace them with values
 -- produced by a new Observable.

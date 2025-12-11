@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.contains')
-require('reactivex.operators.buffer')
+require('reactivex/operators/contains')
+require('reactivex/operators/buffer')
 
 describe('contains', function()
   it('errors when its parent errors', function()

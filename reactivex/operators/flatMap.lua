@@ -1,8 +1,8 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
 
-require("reactivex.operators.map")
-require("reactivex.operators.flatten")
+require("reactivex/operators/map")
+require("reactivex/operators/flatten")
 
 --- Returns a new Observable that transform the items emitted by an Observable into Observables,
 -- then flatten the emissions from those into a single Observable

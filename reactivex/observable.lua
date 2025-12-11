@@ -1,5 +1,5 @@
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- @class Observable
 -- @description Observables push values to Observers.

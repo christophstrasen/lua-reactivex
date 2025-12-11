@@ -1,8 +1,8 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.defaultIfEmpty')
+require('reactivex/operators/defaultIfEmpty')
 
 describe('defaultIfEmpty', function()
   it('errors if the source errors', function()

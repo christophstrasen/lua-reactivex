@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that produces the average of all values produced by the original.
 -- @returns {Observable}

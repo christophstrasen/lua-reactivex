@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that only produces values from the original if they are different from
 -- the previous value.

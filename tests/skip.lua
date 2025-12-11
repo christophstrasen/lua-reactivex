@@ -1,8 +1,8 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.skip')
+require('reactivex/operators/skip')
 
 describe('skip', function()
   it('produces an error if its parent errors', function()

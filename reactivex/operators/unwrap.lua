@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that takes any values produced by the original that consist of multiple
 -- return values and produces each value individually.

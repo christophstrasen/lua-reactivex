@@ -8,7 +8,7 @@
 local VERSION = os.getenv("LUA_REACTIVEX_VERSION") or "0.1.0"
 
 local MAIN = [[
-return require('reactivex.init')
+return require('reactivex/reactivex')
 ]]
 
 local HEADER = [[

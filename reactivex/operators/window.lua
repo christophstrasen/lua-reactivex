@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that produces a sliding window of the values produced by the original.
 -- @arg {number} size - The size of the window. The returned observable will produce this number

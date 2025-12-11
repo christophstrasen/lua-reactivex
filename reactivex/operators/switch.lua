@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local Observer = require('reactivex/observer')
 
 --- Given an Observable that produces Observables, returns an Observable that produces the values
 -- produced by the most recently produced Observable.

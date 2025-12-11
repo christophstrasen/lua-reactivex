@@ -1,1 +1,1 @@
-require("reactivex.aliases")
+require("reactivex/aliases")

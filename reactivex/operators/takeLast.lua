@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that produces a specified number of elements from the end of a source
 -- Observable.

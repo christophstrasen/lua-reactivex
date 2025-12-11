@@ -1,7 +1,7 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that produces its most recent value every time the specified observable
 -- produces a value.

@@ -1,5 +1,5 @@
-local util = require 'reactivex.util'
-local Subscription = require 'reactivex.subscription'
+local util = require('reactivex/util')
+local Subscription = require('reactivex/subscription')
 
 --- @class CooperativeScheduler
 -- @description Manages Observables using coroutines and a virtual clock that must be updated

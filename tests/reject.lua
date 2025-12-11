@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.reject')
-require('reactivex.operators.unpack')
+require('reactivex/operators/reject')
+require('reactivex/operators/unpack')
 
 describe('reject', function()
   it('uses the identity function as the predicate if none is specified', function()

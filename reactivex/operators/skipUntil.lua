@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that skips over values produced by the original until the specified
 -- Observable produces a value.

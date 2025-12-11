@@ -1,1 +1,1 @@
-local util = require("reactivex.util")
+local util = require("reactivex/util")

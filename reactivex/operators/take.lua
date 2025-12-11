@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that only produces the first n results of the original.
 -- @arg {number=1} n - The number of elements to produce before completing.

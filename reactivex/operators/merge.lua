@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that produces the values produced by all the specified Observables in
 -- the order they are produced.

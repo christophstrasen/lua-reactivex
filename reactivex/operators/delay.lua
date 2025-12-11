@@ -1,7 +1,7 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that produces the values of the original delayed by a time period.
 -- @arg {number|function} time - An amount in milliseconds to delay by, or a function which returns

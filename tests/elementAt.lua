@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.elementAt')
+require('reactivex/operators/elementAt')
 
 describe('elementAt', function()
   it('errors when its parent errors', function()

@@ -1,7 +1,7 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
 
 --- @class AsyncSubject
 -- @description AsyncSubjects are subjects that produce either no values or a single value.  If

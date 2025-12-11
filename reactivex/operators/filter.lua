@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns a new Observable that only produces values of the first that satisfy a predicate.
 -- @arg {function} predicate - The predicate used to filter values.

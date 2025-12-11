@@ -1,8 +1,8 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.map')
+require('reactivex/operators/map')
 
 describe('map', function()
   it('produces an error if its parent errors', function()

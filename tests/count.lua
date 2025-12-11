@@ -1,8 +1,8 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.count')
+require('reactivex/operators/count')
 
 describe('count', function()
   it('passes through errors', function()

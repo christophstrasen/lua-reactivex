@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.distinct')
+require('reactivex/operators/distinct')
 
 describe('distinct', function()
   it('does not produce the same value twice', function()

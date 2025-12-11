@@ -1,8 +1,8 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.partition')
+require('reactivex/operators/partition')
 
 describe('partition', function()
   it('errors when its parent errors', function()

@@ -1,10 +1,10 @@
-local Observable = require("reactivex.observable")
-local Subscription = require("reactivex.subscription")
-local CooperativeScheduler = require("reactivex.schedulers.cooperativescheduler")
+local Observable = require("reactivex/observable")
+local Subscription = require("reactivex/subscription")
+local CooperativeScheduler = require("reactivex/schedulers/cooperativescheduler")
 
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
 describe('Observable', function()
   describe('create', function()

@@ -1,5 +1,5 @@
-local Subscription = require("reactivex.subscription")
-local util = require("reactivex.util")
+local Subscription = require("reactivex/subscription")
+local util = require("reactivex/util")
 
 -- @class SubjectSubscription
 -- @description A specialized Subscription for Subjects. **This is NOT a public class, 

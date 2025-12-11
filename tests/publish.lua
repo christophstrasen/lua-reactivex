@@ -1,9 +1,9 @@
 package.path = "./?.lua;./?/init.lua;" .. package.path
 
-local Observable = require("reactivex.observable")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.publish')
+require('reactivex/operators/publish')
 
 describe('publish', function()
   it('multicasts a single source subscription to many observers', function()

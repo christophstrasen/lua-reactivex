@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
+local Observable = require('reactivex/observable')
 
-require("reactivex.operators.reduce")
+require("reactivex/operators/reduce")
 
 --- Returns an Observable that produces a single value representing the sum of the values produced
 -- by the original.

@@ -1,7 +1,7 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
+local Observer = require('reactivex/observer')
 
 --- Returns a new throttled Observable that waits to produce values until a timeout has expired, at
 -- which point it produces the latest value from the source Observable.  Whenever the source

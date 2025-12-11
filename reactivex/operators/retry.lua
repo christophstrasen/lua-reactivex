@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that restarts in the event of an error.
 -- @arg {number=} count - The maximum number of times to retry.  If left unspecified, an infinite

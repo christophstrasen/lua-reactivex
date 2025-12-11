@@ -1,6 +1,6 @@
-local util = require("reactivex.util")
+local util = require("reactivex/util")
 local Subject -- lazy loaded to avoid loop
-local Subscription = require("reactivex.subscription")
+local Subscription = require("reactivex/subscription")
 local _initialized = false
 
 -- @class AnonymousSubject
@@ -14,7 +14,7 @@ AnonymousSubject.__tostring = util.constant('AnonymousSubject')
 
 local function lazyInitClass()
   if _initialized then return end
-  Subject = require("reactivex.subjects.subject")
+  Subject = require("reactivex/subjects/subject")
   setmetatable(AnonymousSubject, Subject)
   _initialized = true
 end

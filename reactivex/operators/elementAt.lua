@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
 
 --- Returns an Observable that produces the nth element produced by the source Observable.
 -- @arg {number} index - The index of the item, with an index of 1 representing the first.

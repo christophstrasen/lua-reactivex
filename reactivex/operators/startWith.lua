@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local util = require 'reactivex.util'
+local Observable = require('reactivex/observable')
+local util = require('reactivex/util')
 
 --- Returns a new Observable that produces the specified values followed by all elements produced by
 -- the source Observable.

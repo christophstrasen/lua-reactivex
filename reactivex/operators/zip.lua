@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
 
 --- Returns an Observable that merges the values produced by the source Observables by grouping them
 -- by their index.  The first onNext event contains the first value of all of the sources, the

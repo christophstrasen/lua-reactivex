@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.with')
+require('reactivex/operators/with')
 
 describe('with', function()
   it('returns the observable it is called on if no other sources are specified', function()

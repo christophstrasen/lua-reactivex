@@ -26,17 +26,18 @@ dependencies = {
 build = {
   type = "builtin",
   modules = { 
-    ["reactivex"] = "reactivex/init.lua",
+    ["reactivex"] = "reactivex/reactivex.lua",
 
     ["reactivex.aliases"] = "reactivex/aliases.lua",
-    ["reactivex.init"] = "reactivex/init.lua",
+    ["reactivex.init"] = "reactivex/reactivex.lua",
     ["reactivex.observable"] = "reactivex/observable.lua",
     ["reactivex.observer"] = "reactivex/observer.lua",
     ["reactivex.subscription"] = "reactivex/subscription.lua",
     ["reactivex.subjectsubscription"] = "reactivex/subjectsubscription.lua",
     ["reactivex.util"] = "reactivex/util.lua",
 
-    ["reactivex.operators.init"] = "reactivex/operators/init.lua",
+    ["reactivex.operators"] = "reactivex/operators.lua",
+    ["reactivex.operators.init"] = "reactivex/operators.lua",
     ["reactivex.operators.partition"] = "reactivex/operators/partition.lua",
     ["reactivex.operators.last"] = "reactivex/operators/last.lua",
     ["reactivex.operators.pack"] = "reactivex/operators/pack.lua",

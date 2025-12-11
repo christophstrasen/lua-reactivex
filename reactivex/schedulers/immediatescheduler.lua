@@ -1,4 +1,4 @@
-local util = require 'reactivex.util'
+local util = require('reactivex/util')
 
 --- @class ImmediateScheduler
 -- @description Schedules Observables by running all operations immediately.

@@ -1,6 +1,6 @@
-local Subject = require 'reactivex.subjects/subject'
-local Observer = require 'reactivex.observer'
-local util = require 'reactivex.util'
+local Subject = require('reactivex/subjects/subject')
+local Observer = require('reactivex/observer')
+local util = require('reactivex/util')
 
 --- @class ReplaySubject
 -- @description A Subject that provides new Subscribers with some or all of the most recently

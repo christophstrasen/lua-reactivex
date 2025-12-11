@@ -1,11 +1,11 @@
 package.path = "./?.lua;./?/init.lua;" .. package.path
 
-local Observable = require("reactivex.observable")
-local Subject = require("reactivex.subjects.subject")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Subject = require("reactivex/subjects/subject")
+local Subscription = require("reactivex/subscription")
 
-require('reactivex.operators.publish')
-require('reactivex.operators.refCount')
+require('reactivex/operators/publish')
+require('reactivex/operators/refCount')
 
 describe('refCount', function()
   it('auto-connects on first subscriber and disconnects on last', function()

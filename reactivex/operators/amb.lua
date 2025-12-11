@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Subscription = require 'reactivex.subscription'
+local Observable = require('reactivex/observable')
+local Subscription = require('reactivex/subscription')
 
 --- Given a set of Observables, produces values from only the first one to produce a value.
 -- @arg {Observable...} observables

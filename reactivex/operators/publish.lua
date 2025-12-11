@@ -1,5 +1,5 @@
-local Observable = require 'reactivex.observable'
-local Subject = require 'reactivex.subjects.subject'
+local Observable = require('reactivex/observable')
+local Subject = require('reactivex/subjects/subject')
 
 -- Turns a cold Observable into a ConnectableObservable that shares a single
 -- subscription through an internal Subject. Call :connect() to subscribe the

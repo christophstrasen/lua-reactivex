@@ -1,9 +1,9 @@
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
-local Subject = require("reactivex.subjects.subject")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
+local Subject = require("reactivex/subjects/subject")
 
-require('reactivex.operators.merge')
+require('reactivex/operators/merge')
 
 describe('merge', function()
   it('produces values from the first observable if it is the only argument', function()

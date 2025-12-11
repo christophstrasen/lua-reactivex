@@ -1,12 +1,12 @@
 package.path = "./?.lua;./?/init.lua;" .. package.path
 
-local Observable = require("reactivex.observable")
+local Observable = require("reactivex/observable")
 
-require('reactivex.operators.share')
+require('reactivex/operators/share')
 
 describe('share', function()
   it('is equivalent to publish():refCount()', function()
-    local source = require("reactivex.subjects.subject").create()
+    local source = require("reactivex/subjects/subject").create()
     local shared = source:share()
     local a, b = {}, {}
 

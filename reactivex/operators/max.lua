@@ -1,6 +1,6 @@
-local Observable = require 'reactivex.observable'
+local Observable = require('reactivex/observable')
 
-require("reactivex.operators.reduce")
+require("reactivex/operators/reduce")
 
 --- Returns a new Observable that produces the maximum value produced by the original.
 -- @returns {Observable}

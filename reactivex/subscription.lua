@@ -1,4 +1,4 @@
-local util = require 'reactivex.util'
+local util = require('reactivex/util')
 
 --- @class Subscription
 -- @description A handle representing the link between an Observer and an Observable, as well as any

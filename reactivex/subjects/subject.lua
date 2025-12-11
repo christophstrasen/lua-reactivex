@@ -1,9 +1,9 @@
-local Observable = require 'reactivex.observable'
-local Observer = require 'reactivex.observer'
-local Subscription = require 'reactivex.subscription'
-local util = require 'reactivex.util'
-local AnonymousSubject = require 'reactivex.subjects.anonymoussubject'
-local SubjectSubscription = require 'reactivex.subjectsubscription'
+local Observable = require('reactivex/observable')
+local Observer = require('reactivex/observer')
+local Subscription = require('reactivex/subscription')
+local util = require('reactivex/util')
+local AnonymousSubject = require('reactivex/subjects/anonymoussubject')
+local SubjectSubscription = require('reactivex/subjectsubscription')
 
 --- @class Subject
 -- @description Subjects function both as an Observer and as an Observable. Subjects inherit all

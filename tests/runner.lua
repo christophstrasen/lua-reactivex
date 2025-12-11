@@ -75,6 +75,15 @@ function main()
       },
     },
     {
+      testFile = 'operators_shim',
+      luacovConfig = {
+        include = {
+          "^.*/reactivex/operators$",
+          "^.*/reactivex/reactivex/operators$",
+        },
+      },
+    },
+    {
       testFile = 'testOperators', 
       luacovConfig = {
         include = { "^.*/reactivex/operators/.*$"},
@@ -206,7 +215,7 @@ function runnerUtils.extendLustWithReactiveAssertions()
       end
   
       local onNext, onError, onCompleted = observableSpy(observable)
-      expect(observable).to.be.an(require("reactivex.observable"))
+      expect(observable).to.be.an(require("reactivex/observable"))
       expect(onNext).to.equal(values)
       expect(#onError).to.equal(0)
       expect(#onCompleted).to.equal(1)
@@ -217,7 +226,7 @@ function runnerUtils.extendLustWithReactiveAssertions()
   lust.paths['nothing'] = {
     test = function(observable)
       local onNext, onError, onCompleted = observableSpy(observable)
-      expect(observable).to.be.an(require("reactivex.observable"))
+      expect(observable).to.be.an(require("reactivex/observable"))
       expect(#onNext).to.equal(0)
       expect(#onError).to.equal(0)
       expect(#onCompleted).to.equal(1)
@@ -228,7 +237,7 @@ function runnerUtils.extendLustWithReactiveAssertions()
   lust.paths['error'] = {
     test = function(observable)
       local _, onError = observableSpy(observable)
-      expect(observable).to.be.an(require("reactivex.observable"))
+      expect(observable).to.be.an(require("reactivex/observable"))
       expect(#onError).to.equal(1)
       return true
     end
@@ -258,7 +267,7 @@ function testHelpers.observableSpy(observable)
   local onNextSpy = spy()
   local onErrorSpy = spy()
   local onCompletedSpy = spy()
-  local observer = require("reactivex.observer").create(
+  local observer = require("reactivex/observer").create(
     function (...) onNextSpy(...) end,
     function (...) onErrorSpy(...) end,
     function () onCompletedSpy() end
@@ -268,7 +277,7 @@ function testHelpers.observableSpy(observable)
 end
 
 function testHelpers.createPassThroughObserver(destination, overrideOnNext, overrideOnError, overrideOnCompleted)
-  local Observer = require 'reactivex.observer'
+  local Observer = require('reactivex/observer')
 
   return Observer.create(
     function (...)
@@ -296,7 +305,7 @@ function testHelpers.createPassThroughObserver(destination, overrideOnNext, over
 end
 
 function testHelpers.createSingleUseOperator(operatorName, observerFactoryFn)
-  local Observable = require 'reactivex.observable'
+  local Observable = require('reactivex/observable')
 
   local fakeOperator = { 
     observerFactoryFn = observerFactoryFn, 

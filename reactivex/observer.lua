@@ -1,5 +1,5 @@
-local util = require 'reactivex.util'
-local Subscription = require 'reactivex.subscription'
+local util = require('reactivex/util')
+local Subscription = require('reactivex/subscription')
 
 --- @class Observer
 -- @description Observers are simple objects that receive values from Observables.

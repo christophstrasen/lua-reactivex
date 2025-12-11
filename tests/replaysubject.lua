@@ -1,10 +1,10 @@
-local Observer = require("reactivex.observer")
-local ReplaySubject = require("reactivex.subjects.replaysubject")
-local Subscription = require("reactivex.subscription")
+local Observer = require("reactivex/observer")
+local ReplaySubject = require("reactivex/subjects/replaysubject")
+local Subscription = require("reactivex/subscription")
 
-local Observable = require("reactivex.observable")
-local Observer = require("reactivex.observer")
-local Subscription = require("reactivex.subscription")
+local Observable = require("reactivex/observable")
+local Observer = require("reactivex/observer")
+local Subscription = require("reactivex/subscription")
 
 describe('ReplaySubject', function()
   describe('create', function()
