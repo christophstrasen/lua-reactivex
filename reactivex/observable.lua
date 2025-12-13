@@ -187,6 +187,9 @@ end
 -- @arg {string} filename - The name of the file used to create the Observable
 -- @returns {Observable}
 function Observable.fromFileByLine(filename)
+  if not io or type(io.open) ~= 'function' or type(io.lines) ~= 'function' then
+    return Observable.throw('fromFileByLine requires io.open/io.lines (not available in this runtime)')
+  end
   return Observable.create(function(observer)
     local file = io.open(filename, 'r')
     if file then
