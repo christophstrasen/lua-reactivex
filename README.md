@@ -1,46 +1,22 @@
-# Lua-ReactiveX [![Build Status](https://travis-ci.org/4O4/lua-reactivex.svg?branch=master)](https://travis-ci.org/4O4/lua-reactivex) [![Coverage Status](https://coveralls.io/repos/github/4O4/lua-reactivex/badge.svg?branch=master)](https://coveralls.io/github/4O4/lua-reactivex?branch=master)
+# Lua-ReactiveX
 
 [Reactive Extensions](http://reactivex.io) for Lua.
 
-Lua-ReactiveX gives Lua the power of Observables, which are data structures that represent a stream of values that arrive over time. They're very handy when dealing with events, streams of data, asynchronous requests, and concurrency.
+Lua-ReactiveX gives Lua the power of Observables: data structures that represent a stream of values over time. They're handy for events, streams of data, asynchronous requests, and concurrency-like composition.
 
-This is a friendly fork of [RxLua](https://github.com/bjornbytes/RxLua). All credits for initial development go to the original author, [bjornbytes](https://github.com/bjornbytes).
+This repo is a maintained fork of https://github.com/4O4/lua-reactivex (itself a fork of [RxLua](https://github.com/bjornbytes/RxLua)). Credits for the original work go to [bjornbytes](https://github.com/bjornbytes), with further stewardship and improvements by Paweł K (4O4) and contributors.
 
-This fork includes some fixes and features contributed by the community. There are also foundational changes here in order to introduce a proper automatic unsubscription mechanism which was missing and caused unexpected behavior in some cases. These changes are heavily inspired by the RxJS (5.x) internals, and thus RxJS is considered a reference implementation for all future development of Lua-ReactiveX.
+This fork adds familiar Rx operators like `publish`, `refCount`, and `share`.
+
+More importantly, it includes compatibility changes so lua-reactivex runs in more restricted Lua environments (e.g. Project Zomboid's Kahlua runtime) while staying compatible with stock Lua. For example: `require` paths use slashes, folder modules avoid relying on `init.lua`, and optional/restricted packages like `io` are guarded with fallbacks.
 
 ## Getting Started
 
-### Lua
+Simply clone the repo to get started. 
 
-Install with luarocks:
+### Restricted environments (e.g. Project Zomboid / locked-down `package.path`)
 
-```sh
-luarocks install reactivex
-```
-
-Or download a portable package from the Releases page, and extract `reactivex.lua` file into your project. Then simply require it:
-
-```lua
-local rx = require("reactivex")
-```
-
-### Luvit
-
-Install using `lit`:
-
-```sh
-lit install 4O4/reactivex
-```
-
-Then require it:
-
-```lua
-local rx = require("reactivex")
-```
-
-### Love2D
-
-See [RxLove](https://github.com/bjornbytes/RxLove). 
+If you vend `lua-reactivex` as a git submodule but your host runtime can only `require(...)` from a specific folder (and/or does not support `init.lua` folder loading), copy the Lua payload into that folder as siblings: `reactivex.lua`, the `reactivex/` directory, and `operators.lua` (root-level operator aggregator). With that layout, `local rx = require("reactivex")` works without needing any `package.path` changes, and `require("reactivex/operators")` resolves via the sibling `operators.lua`.
 
 ## Example Usage
 
