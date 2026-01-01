@@ -9,17 +9,16 @@ Observable.__tostring = util.constant('Observable')
 Observable.___isa = { Observable }
 
 --- Creates a new Observable. Please not that the Observable does not do any work right after creation, but only after calling a `subscribe` on it.
--- @arg {function} subscribe - The subscription function that produces values. It is called when the Observable 
+-- @arg {function} subscribe - The subscription function that produces values. It is called when the Observable
 --                             is initially subscribed to. This function is given an Observer, to which new values
 --                             can be `onNext`ed, or an `onError` method can be called to raise an error, or `onCompleted`
 --                             can be called to notify of a successful completion.
 -- @returns {Observable}
 function Observable.create(subscribe)
   local self = {}
-  local subscribe = subscribe
 
   if subscribe then
-    self._subscribe = function (self, ...) return subscribe(...) end
+    self._subscribe = function (_, ...) return subscribe(...) end
   end
 
   return setmetatable(self, Observable)
@@ -29,11 +28,10 @@ end
 -- @arg {function} createObserver observer factory function
 -- @returns {Observable} a new observable chained with the source observable
 function Observable:lift(createObserver)
-  local this = self
-  local createObserver = createObserver
+  local source = self
 
   return Observable.create(function (observer)
-    return this:subscribe(createObserver(observer))
+    return source:subscribe(createObserver(observer))
   end)
 end
 

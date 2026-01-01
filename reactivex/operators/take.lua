@@ -5,7 +5,7 @@ local Observer = require('reactivex/observer')
 -- @arg {number=1} n - The number of elements to produce before completing.
 -- @returns {Observable}
 function Observable:take(n)
-  local n = n or 1
+  n = n or 1
 
   return self:lift(function (destination)
     if n <= 0 then

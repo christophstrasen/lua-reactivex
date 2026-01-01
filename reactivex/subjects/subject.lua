@@ -33,7 +33,7 @@ function Subject:lift(createObserver)
   return AnonymousSubject.create(self, createObserver)
 end
 
-local DummyEntryForDocs = {}
+local DummyEntryForDocs = {} -- luacheck: ignore 241
 --- Creates a new Observer or uses the exxisting one, and registers Observer handlers for notifications the Subject will emit.
 -- @arg {function|Observer} onNext|observer - Called when the Observable produces a value.
 -- @arg {function} onError - Called when the Observable terminates due to an error.

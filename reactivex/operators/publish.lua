@@ -13,7 +13,7 @@ function Observable:publish()
     return subject:subscribe(observer)
   end)
 
-  function connectable:connect()
+  function connectable.connect()
     if not connection then
       connection = source:subscribe(
         function(...) subject:onNext(...) end,
@@ -31,7 +31,7 @@ function Observable:publish()
     return connection
   end
 
-  function connectable:unsubscribe()
+  function connectable.unsubscribe()
     if connection then
       connection:unsubscribe()
       connection = nil

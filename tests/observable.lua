@@ -241,6 +241,7 @@ describe('Observable', function()
 
     it('errors if the file does not exist', function()
       io.open = function() return nil end
+      io.lines = function() return function() return nil end end
       local onError = spy()
       Observable.fromFileByLine(filename):subscribe(nil, onError, nil)
       expect(onError).to.equal({{ filename }})

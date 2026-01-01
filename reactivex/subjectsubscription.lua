@@ -2,7 +2,7 @@ local Subscription = require("reactivex/subscription")
 local util = require("reactivex/util")
 
 -- @class SubjectSubscription
--- @description A specialized Subscription for Subjects. **This is NOT a public class, 
+-- @description A specialized Subscription for Subjects. **This is NOT a public class,
 -- it is intended for internal use only!**<br>
 -- A handle representing the link between an Observer and a Subject, as well as any
 -- work required to clean up after the Subject completes or the Observer unsubscribes.

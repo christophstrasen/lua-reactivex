@@ -4,7 +4,7 @@ local Subscription = require("reactivex/subscription")
 local _initialized = false
 
 -- @class AnonymousSubject
--- @description A specialized Subject which acts as a proxy when lifting a Subject. 
+-- @description A specialized Subject which acts as a proxy when lifting a Subject.
 -- **This is NOT a public class, it is intended for internal use only!**<br>
 -- Its role is crucial to create a proper chain of operators / observables and to make
 -- automatic unsubscription work correctly.

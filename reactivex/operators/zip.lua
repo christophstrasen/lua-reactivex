@@ -28,8 +28,8 @@ function Observable.zip(...)
         values[i].n = values[i].n + 1
 
         local ready = true
-        for i = 1, count do
-          if values[i].n == 0 then
+        for idx = 1, count do
+          if values[idx].n == 0 then
             ready = false
             break
           end
@@ -38,9 +38,9 @@ function Observable.zip(...)
         if ready then
           local payload = {}
 
-          for i = 1, count do
-            payload[i] = table.remove(values[i], 1)
-            values[i].n = values[i].n - 1
+          for idx = 1, count do
+            payload[idx] = table.remove(values[idx], 1)
+            values[idx].n = values[idx].n - 1
           end
 
           observer:onNext(util.unpack(payload))
